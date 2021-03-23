@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		5D769B7C2608288200D0E637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B7B2608288200D0E637 /* AppDelegate.swift */; };
 		5D769B7E2608288200D0E637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B7D2608288200D0E637 /* SceneDelegate.swift */; };
-		5D769B802608288200D0E637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B7F2608288200D0E637 /* ViewController.swift */; };
+		5D769B802608288200D0E637 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B7F2608288200D0E637 /* ReviewViewController.swift */; };
 		5D769B832608288200D0E637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D769B812608288200D0E637 /* Main.storyboard */; };
 		5D769B852608288400D0E637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D769B842608288400D0E637 /* Assets.xcassets */; };
 		5D769B882608288400D0E637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D769B862608288400D0E637 /* LaunchScreen.storyboard */; };
 		5D769B932608288500D0E637 /* StudyBookReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B922608288500D0E637 /* StudyBookReviewTests.swift */; };
 		5D769B9E2608288500D0E637 /* StudyBookReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769B9D2608288500D0E637 /* StudyBookReviewUITests.swift */; };
+		5D769BBD260876B000D0E637 /* UITextView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BBC260876B000D0E637 /* UITextView+Additions.swift */; };
+		5D769BC2260876CF00D0E637 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BC1260876CF00D0E637 /* UITextViewPlaceholder.swift */; };
+		5D769BC72608783F00D0E637 /* ReviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BC62608783F00D0E637 /* ReviewData.swift */; };
+		5D769BCC260882BB00D0E637 /* localdata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D769BCB260882BB00D0E637 /* localdata.plist */; };
+		5D769BD126088B9900D0E637 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BD026088B9900D0E637 /* DataTableViewCell.swift */; };
+		5D769BD62608910D00D0E637 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BD52608910D00D0E637 /* ListTableViewController.swift */; };
+		5D769BDE2609BE0400D0E637 /* ReviewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */; };
+		5D769BE32609D8BE00D0E637 /* StratchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,7 @@
 		5D769B782608288200D0E637 /* StudyBookReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyBookReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D769B7B2608288200D0E637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D769B7D2608288200D0E637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D769B7F2608288200D0E637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D769B7F2608288200D0E637 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		5D769B822608288200D0E637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D769B842608288400D0E637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D769B872608288400D0E637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		5D769B992608288500D0E637 /* StudyBookReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyBookReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D769B9D2608288500D0E637 /* StudyBookReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyBookReviewUITests.swift; sourceTree = "<group>"; };
 		5D769B9F2608288500D0E637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D769BBC260876B000D0E637 /* UITextView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Additions.swift"; sourceTree = "<group>"; };
+		5D769BC1260876CF00D0E637 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		5D769BC62608783F00D0E637 /* ReviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewData.swift; sourceTree = "<group>"; };
+		5D769BCB260882BB00D0E637 /* localdata.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = localdata.plist; sourceTree = "<group>"; };
+		5D769BD026088B9900D0E637 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataTableViewCell.swift; path = Utils/DataTableViewCell.swift; sourceTree = "<group>"; };
+		5D769BD52608910D00D0E637 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailsViewController.swift; sourceTree = "<group>"; };
+		5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratchyTableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +115,16 @@
 		5D769B7A2608288200D0E637 /* StudyBookReview */ = {
 			isa = PBXGroup;
 			children = (
+				5D769BB82608291A00D0E637 /* Utils */,
+				5D769BB72608290E00D0E637 /* Model */,
 				5D769B7B2608288200D0E637 /* AppDelegate.swift */,
 				5D769B7D2608288200D0E637 /* SceneDelegate.swift */,
-				5D769B7F2608288200D0E637 /* ViewController.swift */,
+				5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */,
+				5D769B7F2608288200D0E637 /* ReviewViewController.swift */,
 				5D769B812608288200D0E637 /* Main.storyboard */,
+				5D769BD52608910D00D0E637 /* ListTableViewController.swift */,
+				5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */,
+				5D769BD026088B9900D0E637 /* DataTableViewCell.swift */,
 				5D769B842608288400D0E637 /* Assets.xcassets */,
 				5D769B862608288400D0E637 /* LaunchScreen.storyboard */,
 				5D769B892608288400D0E637 /* Info.plist */,
@@ -126,6 +148,24 @@
 				5D769B9F2608288500D0E637 /* Info.plist */,
 			);
 			path = StudyBookReviewUITests;
+			sourceTree = "<group>";
+		};
+		5D769BB72608290E00D0E637 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D769BCB260882BB00D0E637 /* localdata.plist */,
+				5D769BC62608783F00D0E637 /* ReviewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D769BB82608291A00D0E637 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D769BBC260876B000D0E637 /* UITextView+Additions.swift */,
+				5D769BC1260876CF00D0E637 /* UITextViewPlaceholder.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +273,7 @@
 			files = (
 				5D769B882608288400D0E637 /* LaunchScreen.storyboard in Resources */,
 				5D769B852608288400D0E637 /* Assets.xcassets in Resources */,
+				5D769BCC260882BB00D0E637 /* localdata.plist in Resources */,
 				5D769B832608288200D0E637 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D769B802608288200D0E637 /* ViewController.swift in Sources */,
+				5D769B802608288200D0E637 /* ReviewViewController.swift in Sources */,
+				5D769BC72608783F00D0E637 /* ReviewData.swift in Sources */,
+				5D769BC2260876CF00D0E637 /* UITextViewPlaceholder.swift in Sources */,
+				5D769BD62608910D00D0E637 /* ListTableViewController.swift in Sources */,
+				5D769BDE2609BE0400D0E637 /* ReviewDetailsViewController.swift in Sources */,
+				5D769BBD260876B000D0E637 /* UITextView+Additions.swift in Sources */,
 				5D769B7C2608288200D0E637 /* AppDelegate.swift in Sources */,
+				5D769BD126088B9900D0E637 /* DataTableViewCell.swift in Sources */,
+				5D769BE32609D8BE00D0E637 /* StratchyTableHeaderView.swift in Sources */,
 				5D769B7E2608288200D0E637 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Laws of UX</string>
+		<key>author</key>
+		<string>Jon Yablonski</string>
+		<key>rating</key>
+		<integer>5</integer>
+		<key>review</key>
+		<string>Must read</string>
+		<key>thumbnailPic</key>
+		<string>laws-thumbnail</string>
+		<key>userName</key>
+		<string>Katya Z.</string>
+		<key>link</key>
+		<string>https://www.amazon.com/Laws-UX-Psychology-Products-Services/dp/149205531X</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>UML Distilled</string>
+		<key>author</key>
+		<string>Martin Fowleruml</string>
+		<key>rating</key>
+		<integer>5</integer>
+		<key>review</key>
+		<string>Must read</string>
+		<key>thumbnailPic</key>
+		<string>uml-thumbnail</string>
+		<key>userName</key>
+		<string>Katya Z.</string>
+		<key>link</key>
+		<string>https://www.amazon.com/UML-Distilled-Standard-Modeling-Language/dp/0321193687/ref=sr_1_1?dchild=1&amp;keywords=UML+Distilled&amp;qid=1616459322&amp;sr=8-1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Fashion: The Definite Visual Guide</string>
+		<key>author</key>
+		<string>DK</string>
+		<key>rating</key>
+		<integer>5</integer>
+		<key>review</key>
+		<string>Must resd</string>
+		<key>thumbnailPic</key>
+		<string>fashion-thumbnail</string>
+		<key>userName</key>
+		<string>Katya Z.</string>
+		<key>link</key>
+		<string>https://www.amazon.com/Fashion-Definitive-Visual-Guide-DK-ebook/dp/B087WVMVGK/ref=sr_1_1?crid=6DSRSOBOL33D&amp;dchild=1&amp;keywords=fashion+the+definitive+visual+guide&amp;qid=1616459885&amp;sprefix=fashion+the+%2Caps%2C226&amp;sr=8-1</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>Head First Design Patterns</string>
+		<key>author</key>
+		<string>Eric Freeman</string>
+		<key>rating</key>
+		<integer>5</integer>
+		<key>review</key>
+		<string>Must resd</string>
+		<key>thumbnailPic</key>
+		<string>design-thumbnail</string>
+		<key>userName</key>
+		<string>Katya Z.</string>
+		<key>link</key>
+		<string>https://www.amazon.com/Head-First-Design-Patterns-Object-Oriented/dp/149207800X/ref=sr_1_1?dchild=1&amp;keywords=Head+First+Design+Patterns&amp;qid=1616459965&amp;s=books&amp;sr=1-1</string>
+	</dict>
+</array>
+</plist>

@@ -29,5 +29,19 @@ class StudyBookReviewTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testDataModelInitSucceeds() {
+        let newReview = ReviewData.init(id: 1, title: "New Book", author: "Adam Smith", review: "Book is great", photo: "image1", rating: 5, userName: "Masha")
+        XCTAssertNotNil(newReview);
+    }
+    
+    func testDataModelInitFails() {
+        let negativeRating = ReviewData.init(id: 1, title: "New Book", author: "Adam Smith", review: "Book is great", photo: "image1", rating: -1, userName: "Masha");
+        XCTAssertNil(negativeRating);
+        
+        let noReviewRating = ReviewData.init(id: 1, title: "New Book", author: "Adam Smith", review: "", photo: "image1", rating: 4, userName: "Masha");
+        XCTAssertNil(noReviewRating);
+        
+    }
 
 }
