@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class ReviewDetailsViewController: UITableViewController {
+class ReviewDetailsViewController: UITableViewController, SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet var tableview: UITableView!
     
@@ -18,12 +19,30 @@ class ReviewDetailsViewController: UITableViewController {
     @IBOutlet weak var reviewerName: UILabel!
     var reviewData: ReviewData?
     private var webLink: URL?
+    @IBOutlet weak var webButton: UIButton!
     
+    @IBAction func amazonBtn(_ sender: UIButton) {
+        if (webLink != nil) {
+            let safariVC = SFSafariViewController(url: webLink!)
+            safariVC.delegate = self
+            safariVC.transitioningDelegate = self
+            present(safariVC, animated: true, completion: nil)
+        }
+        else {
+            print("No Amazon Link added")
+        }
+    }
     
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+      controller.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Group 12.png"))
         
+        webButton.backgroundColor = #colorLiteral(red: 0.899363637, green: 0.8210355639, blue: 0.2810002863, alpha: 1)
+        webButton.tintColor = #colorLiteral(red: 0.7027593851, green: 0.3648658991, blue: 0.2622417212, alpha: 1)
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "< All Reviews", style: UIBarButtonItem.Style.plain, target: self, action: #selector(ReviewDetailsViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
@@ -36,6 +55,14 @@ class ReviewDetailsViewController: UITableViewController {
             authorName.text = reviewData.author
             reviewText.text = reviewData.review
             reviewerName.text = reviewData.userName
+            
+            if (reviewData.amazonLink != nil) {
+                self.webLink = reviewData.amazonLink
+                webButton.isEnabled = true;
+            } else
+            {
+                webButton.isEnabled = false;
+            }
         }
         
         self.tableView.tableHeaderView = headerView
@@ -70,9 +97,13 @@ class ReviewDetailsViewController: UITableViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = .blue//.white  //change the back button color
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.7064098716, green: 0.3690130115, blue: 0.2619327307, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize:24, weight: .bold)]
         
     }
+    
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
