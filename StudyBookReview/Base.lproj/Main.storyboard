@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,6 +50,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaL-dd-Tzc">
+                                            <rect key="frame" x="15" y="11" width="21" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="CS1-2A-Zza" firstAttribute="top" secondItem="bYk-CM-EEg" secondAttribute="bottom" constant="5" id="EFc-Kw-qO1"/>
@@ -66,6 +71,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="AttitudeImg" destination="qaL-dd-Tzc" id="YOG-cA-Ga7"/>
+                                    <outlet property="attitudeImg" destination="qaL-dd-Tzc" id="eJD-ZR-V5r"/>
                                     <outlet property="author" destination="CS1-2A-Zza" id="1NH-Ng-ahR"/>
                                     <outlet property="bookPic" destination="oow-jc-f5l" id="yrO-pJ-bJI"/>
                                     <outlet property="review" destination="aDI-Qd-BWU" id="rKA-cB-1Hz"/>
@@ -246,6 +253,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="amazonLinkField" destination="Isn-zt-602" id="fSN-Ln-dP3"/>
                         <outlet property="authorField" destination="vic-4I-U4o" id="NYi-6x-jDb"/>
                         <outlet property="bookImg" destination="iLE-8X-jQ9" id="qGl-fP-akG"/>
                         <outlet property="reviewField" destination="6Ls-gq-Vsm" id="VLA-cd-0Kv"/>
@@ -394,11 +402,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-1k-rsP" customClass="LikeControl" customModule="StudyBookReview" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-1k-rsP" customClass="LikeControl" customModule="StudyBookReview" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Rmy-1k-rsP" firstAttribute="leading" secondItem="Ug7-uL-KCl" secondAttribute="leading" id="abA-jf-jC2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rmy-1k-rsP" secondAttribute="trailing" id="vn6-26-T4m"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -443,6 +454,7 @@
                     <connections>
                         <outlet property="authorName" destination="Arw-oa-Zzr" id="tM6-JH-iCJ"/>
                         <outlet property="bookTitle" destination="x1m-S3-FCU" id="Tws-bw-Kbk"/>
+                        <outlet property="likeControl" destination="Rmy-1k-rsP" id="hBN-Kh-aZN"/>
                         <outlet property="reviewText" destination="Nds-ug-a4c" id="gNG-jL-jdc"/>
                         <outlet property="reviewerName" destination="OOf-uH-xOg" id="bib-6N-fZB"/>
                         <outlet property="tableview" destination="6Cj-Jw-6EF" id="U1b-9W-hxQ"/>

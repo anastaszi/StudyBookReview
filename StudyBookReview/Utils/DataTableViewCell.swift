@@ -13,6 +13,7 @@ class DataTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var author: UILabel!
    
+    @IBOutlet weak var attitudeImg: UIImageView!
     @IBOutlet weak var review: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -17,6 +17,8 @@ class ReviewDetailsViewController: UITableViewController, SFSafariViewController
     
     @IBOutlet weak var reviewText: UILabel!
     @IBOutlet weak var reviewerName: UILabel!
+    //@IBOutlet weak var likeControl: LikeControl!
+    @IBOutlet weak var likeControl: LikeControl!
     var reviewData: ReviewData?
     private var webLink: URL?
     @IBOutlet weak var webButton: UIButton!
@@ -46,6 +48,7 @@ class ReviewDetailsViewController: UITableViewController, SFSafariViewController
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "< All Reviews", style: UIBarButtonItem.Style.plain, target: self, action: #selector(ReviewDetailsViewController.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
+        likeControl.delegate = self
         let headerView = StratchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: 150, height: 250))
         if let reviewData = reviewData {
             print(reviewData.title)
@@ -171,9 +174,10 @@ extension ReviewDetailsViewController {
     }
 }
 
-extension ReviewDetailsViewController {
+extension ReviewDetailsViewController: LikeDelegate {
     func LikeButtonClicked(value: String) {
         reviewData!.attitude = value;
+        print("New status: \(value)")
     }
 }
 

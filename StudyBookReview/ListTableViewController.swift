@@ -49,9 +49,19 @@ class ListTableViewController: UITableViewController {
         cell.author.text = currentData.author
         cell.review.text = currentData.review
         cell.bookPic.image = currentData.photo
+        if (currentData.attitude == "like") {
+            cell.attitudeImg.image = UIImage(named: "emoji-heart-eyes-fill")
+        } else if (currentData.attitude == "dislike") {
+            cell.attitudeImg.image = UIImage(named: "emoji-frown-fill")
+        } else {
+            cell.attitudeImg.image = nil
+        }
+        
         
         // Configure the cell...
+        print("Book: ")
         print(currentData.author!)
+        print(currentData.attitude!)
         return cell
     }
  

@@ -15,7 +15,10 @@ protocol LikeDelegate: class {
     
     weak var delegate: LikeDelegate? = nil
     
-    var status: String = ""
+    var status: String = "" {
+        didSet {
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +45,7 @@ protocol LikeDelegate: class {
         let button = UIButton()
         let likeImgFill = UIImage(named: "emoji-heart-eyes-fill");
         let likeImg = UIImage(named: "emoji-heart-eyes");
-      //  button.backgroundColor = #colorLiteral(red: 0, green: 0.6900390387, blue: 0.5257087946, alpha: 1)
+        //button.backgroundColor = #colorLiteral(red: 0, green: 0.6900390387, blue: 0.5257087946, alpha: 1)
         //button.setTitle("Agree", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true;
@@ -59,6 +62,7 @@ protocol LikeDelegate: class {
         let dislikeImgFill = UIImage(named: "emoji-frown-fill");
         let dislikeImg = UIImage(named: "emoji-frown");
         button.translatesAutoresizingMaskIntoConstraints = false
+        //button.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
         button.setImage(dislikeImg, for: .normal)
         button.setImage(dislikeImgFill, for: .selected)
         button.heightAnchor.constraint(equalToConstant: buttonSize.height).isActive = true;
@@ -70,7 +74,7 @@ protocol LikeDelegate: class {
     }
     
     @objc func dislikeBtnTapped(button: UIButton) {
-        print("disliked")
+        print("dislike")
         if status == "dislike" {
             status = ""
             button.isSelected = false;
@@ -84,7 +88,7 @@ protocol LikeDelegate: class {
         delegate.LikeButtonClicked(value: status)
     }
     @objc func likeBtnTapped(button: UIButton) {
-        print("liked")
+        print("like")
         if status == "like" {
             status = ""
             button.isSelected = false;
