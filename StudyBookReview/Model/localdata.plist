@@ -9,8 +9,8 @@
 		<string>Laws of UX</string>
 		<key>author</key>
 		<string>Jon Yablonski</string>
-		<key>rating</key>
-		<integer>5</integer>
+		<key>attitude</key>
+		<string></string>
 		<key>review</key>
 		<string>Must read</string>
 		<key>thumbnailPic</key>
@@ -27,8 +27,8 @@
 		<string>UML Distilled</string>
 		<key>author</key>
 		<string>Martin Fowleruml</string>
-		<key>rating</key>
-		<integer>5</integer>
+		<key>attitude</key>
+		<string>like</string>
 		<key>review</key>
 		<string>Must read</string>
 		<key>thumbnailPic</key>
@@ -45,8 +45,8 @@
 		<string>Fashion: The Definite Visual Guide</string>
 		<key>author</key>
 		<string>DK</string>
-		<key>rating</key>
-		<integer>5</integer>
+		<key>attitude</key>
+		<string></string>
 		<key>review</key>
 		<string>Must resd</string>
 		<key>thumbnailPic</key>
@@ -63,8 +63,8 @@
 		<string>Head First Design Patterns</string>
 		<key>author</key>
 		<string>Eric Freeman</string>
-		<key>rating</key>
-		<integer>5</integer>
+		<key>attitude</key>
+		<string></string>
 		<key>review</key>
 		<string>Must resd</string>
 		<key>thumbnailPic</key>

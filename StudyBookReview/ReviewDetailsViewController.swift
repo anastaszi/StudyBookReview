@@ -56,8 +56,8 @@ class ReviewDetailsViewController: UITableViewController, SFSafariViewController
             reviewText.text = reviewData.review
             reviewerName.text = reviewData.userName
             
-            if (reviewData.amazonLink != nil) {
-                self.webLink = reviewData.amazonLink
+            if (reviewData.link != nil) {
+                self.webLink = reviewData.link
                 webButton.isEnabled = true;
             } else
             {
@@ -168,6 +168,12 @@ extension ReviewDetailsViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let headerView = self.tableView.tableHeaderView as! StratchyTableHeaderView
         headerView.scrollViewDidScroll(scrollView: scrollView)
+    }
+}
+
+extension ReviewDetailsViewController {
+    func LikeButtonClicked(value: String) {
+        reviewData!.attitude = value;
     }
 }
 

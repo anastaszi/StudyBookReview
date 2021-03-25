@@ -17,12 +17,14 @@ class ReviewViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     @IBOutlet weak var bookImg: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var amazonLinkField: UITextField!
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
     
     var newReview: ReviewData?
+    var imgUpdated = false;
     
     weak var activeField: UIView?
     
@@ -59,6 +61,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate, UITextViewDel
         let picker = PHPickerViewController(configuration: configuration);
         picker.delegate = self;
         present(picker, animated: true);
+        imgUpdated = true;
     }
     
     override func viewDidLoad() {
@@ -72,6 +75,9 @@ class ReviewViewController: UIViewController, UITextFieldDelegate, UITextViewDel
               
         authorField.delegate = self;
         authorField.tag = 1;
+        
+        amazonLinkField.delegate = self;
+        amazonLinkField.tag = 2;
         
         reviewField.placeholder = "Enter your review";
         reviewField.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)));
@@ -189,7 +195,16 @@ class ReviewViewController: UIViewController, UITextFieldDelegate, UITextViewDel
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
-        newReview = ReviewData.init(id: 45, title: titleField.text!, author: authorField.text, review: reviewField.text, photo: bookImg.image, rating: 0, userName: "Anastasia", shopLink: nil)
+        let imgToUpload: UIImage;
+        if (!imgUpdated) {
+            imgToUpload = UIImage(named: "book")!;
+        }
+        else {
+            imgToUpload = bookImg.image!
+        }
+        
+        
+        newReview = ReviewData.init(id: 45, title: titleField.text!, author: authorField.text, review: reviewField.text, photo: imgToUpload, attitude: "", userName: "Anastasia", link: URL(string: amazonLinkField.text ?? ""))
     }
     
     private func updateSaveButtonState() {

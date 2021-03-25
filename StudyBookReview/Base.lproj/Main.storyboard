@@ -103,10 +103,10 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-T4-SCI">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="885"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1010.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-9H-q7V">
-                                                <rect key="frame" x="20" y="40" width="374" height="861.5"/>
+                                                <rect key="frame" x="20" y="40" width="374" height="987"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="250" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="defaultphoto" translatesAutoresizingMaskIntoConstraints="NO" id="iLE-8X-jQ9">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
@@ -162,8 +162,22 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSf-ZD-lSS">
+                                                        <rect key="frame" x="0.0" y="811.5" width="31.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Amazon Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Isn-zt-602">
+                                                        <rect key="frame" x="0.0" y="862" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="Dc4-Eo-F46"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-tY-Ffu">
-                                                        <rect key="frame" x="0.0" y="811.5" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="937" width="374" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ayb-9l-qj3"/>
                                                         </constraints>
@@ -179,7 +193,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="6Ls-gq-Vsm" secondAttribute="trailing" id="Cxo-3H-rwT"/>
                                                     <constraint firstAttribute="trailing" secondItem="iRt-Rw-hXk" secondAttribute="trailing" id="GuH-Z0-pBi"/>
                                                     <constraint firstAttribute="trailing" secondItem="iLE-8X-jQ9" secondAttribute="trailing" id="LHv-BQ-WGR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Isn-zt-602" secondAttribute="trailing" id="PeL-sU-gzk"/>
                                                     <constraint firstAttribute="trailing" secondItem="iLE-8X-jQ9" secondAttribute="trailing" id="b8o-be-FeU"/>
+                                                    <constraint firstItem="Isn-zt-602" firstAttribute="leading" secondItem="ulM-9H-q7V" secondAttribute="leading" id="beq-n0-evR"/>
                                                     <constraint firstAttribute="trailing" secondItem="vic-4I-U4o" secondAttribute="trailing" id="dtu-RI-B4p"/>
                                                     <constraint firstItem="iLE-8X-jQ9" firstAttribute="leading" secondItem="ulM-9H-q7V" secondAttribute="leading" id="hkv-A4-P7a"/>
                                                     <constraint firstItem="iRt-Rw-hXk" firstAttribute="leading" secondItem="ulM-9H-q7V" secondAttribute="leading" id="rL7-8k-fcd"/>
@@ -369,10 +385,28 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="Ks3-a8-c3f">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RV4-u0-1IQ">
+                                        <rect key="frame" x="20" y="321.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RV4-u0-1IQ" id="Ug7-uL-KCl">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-1k-rsP" customClass="LikeControl" customModule="StudyBookReview" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </stackView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection id="lh3-N7-bHg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pSJ-UQ-6mF">
-                                        <rect key="frame" x="20" y="321.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="401" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pSJ-UQ-6mF" id="45Z-gA-Rhf">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>

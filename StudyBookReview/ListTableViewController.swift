@@ -80,13 +80,13 @@ class ListTableViewController: UITableViewController {
             myData.append(prevdata)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
-        /*if let sourceViewController = sender.source as? DetailTableViewController, let prevdata=sourceViewController.newsdata {
+        if let sourceViewController = sender.source as? ReviewDetailsViewController, let prevdata=sourceViewController.reviewData {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 //This code checks whether a row in the table view is selected.
-                mydata[selectedIndexPath.row] = prevdata
+                myData[selectedIndexPath.row] = prevdata
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
-        }*/
+        }
         //ReviewData.saveMyData(mydata: myData)
     }
 

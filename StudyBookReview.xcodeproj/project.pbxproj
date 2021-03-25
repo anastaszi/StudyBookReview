@@ -23,6 +23,7 @@
 		5D769BD62608910D00D0E637 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BD52608910D00D0E637 /* ListTableViewController.swift */; };
 		5D769BDE2609BE0400D0E637 /* ReviewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */; };
 		5D769BE32609D8BE00D0E637 /* StratchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */; };
+		5D769BE8260B222100D0E637 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D769BE7260B222100D0E637 /* LikeControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5D769BD52608910D00D0E637 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailsViewController.swift; sourceTree = "<group>"; };
 		5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratchyTableHeaderView.swift; sourceTree = "<group>"; };
+		5D769BE7260B222100D0E637 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				5D769B7F2608288200D0E637 /* ReviewViewController.swift */,
 				5D769B812608288200D0E637 /* Main.storyboard */,
 				5D769BD52608910D00D0E637 /* ListTableViewController.swift */,
+				5D769BE7260B222100D0E637 /* LikeControl.swift */,
 				5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */,
 				5D769BD026088B9900D0E637 /* DataTableViewCell.swift */,
 				5D769B842608288400D0E637 /* Assets.xcassets */,
@@ -307,6 +310,7 @@
 				5D769BBD260876B000D0E637 /* UITextView+Additions.swift in Sources */,
 				5D769B7C2608288200D0E637 /* AppDelegate.swift in Sources */,
 				5D769BD126088B9900D0E637 /* DataTableViewCell.swift in Sources */,
+				5D769BE8260B222100D0E637 /* LikeControl.swift in Sources */,
 				5D769BE32609D8BE00D0E637 /* StratchyTableHeaderView.swift in Sources */,
 				5D769B7E2608288200D0E637 /* SceneDelegate.swift in Sources */,
 			);
