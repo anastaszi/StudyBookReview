@@ -3,7 +3,7 @@
 The app allows users to learn about their peers opinions on studybooks, react to those opinions and 
 create their own book reviews. 
 
-Video (https://youtu.be/jMO8TRIpgm8)
+Video (https://www.youtube.com/watch?v=8W6Cnp2jmxE)
 
 ## Screen 1 - The list of all reviews
 
