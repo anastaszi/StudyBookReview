@@ -105,7 +105,16 @@ class ReviewDetailsViewController: UITableViewController, SFSafariViewController
         
     }
     
-    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+          super.viewWillTransition(to: size, with: coordinator)
+          if UIDevice.current.orientation.isLandscape {
+              print("Landscape")
+            tableView.backgroundView = UIImageView(image: UIImage(named: "Group 11.png"))
+          } else {
+              print("Portrait")
+            tableView.backgroundView = UIImageView(image: UIImage(named: "Group 12.png"))
+          }
+      }
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

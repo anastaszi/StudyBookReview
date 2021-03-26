@@ -67,6 +67,7 @@
 		5D769BDD2609BE0400D0E637 /* ReviewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailsViewController.swift; sourceTree = "<group>"; };
 		5D769BE22609D8BE00D0E637 /* StratchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StratchyTableHeaderView.swift; sourceTree = "<group>"; };
 		5D769BE7260B222100D0E637 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		5DC1DF37260D3FA6009541FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		5D769B6F2608288200D0E637 = {
 			isa = PBXGroup;
 			children = (
+				5DC1DF37260D3FA6009541FA /* README.md */,
 				5D769B7A2608288200D0E637 /* StudyBookReview */,
 				5D769B912608288500D0E637 /* StudyBookReviewTests */,
 				5D769B9C2608288500D0E637 /* StudyBookReviewUITests */,

@@ -153,7 +153,6 @@ class ReviewViewController: UIViewController, UITextFieldDelegate, UITextViewDel
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeField = textField
-        saveButton.isEnabled = false;
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

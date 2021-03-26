@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,23 +13,59 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 12" translatesAutoresizingMaskIntoConstraints="NO" id="gQo-cr-JaF">
-                                <rect key="frame" x="-66" y="20" width="527" height="935"/>
+                                <rect key="frame" x="-66" y="20" width="1009" height="1790"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gQo-cr-JaF" secondAttribute="height" multiplier="31:55" id="9bq-7H-np6"/>
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-89-ecO">
+                                <rect key="frame" x="44" y="100" width="808" height="842.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StudyBookReviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6e-7c-6yp">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="267.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read to Gain Knowledge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcY-hc-CST">
+                                        <rect key="frame" x="0.0" y="287.5" width="808" height="267.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review to Help Others" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Com-yx-xXD">
+                                        <rect key="frame" x="0.0" y="575" width="808" height="267.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Com-yx-xXD" firstAttribute="leading" secondItem="gvE-89-ecO" secondAttribute="leading" id="13B-gD-t8E"/>
+                                    <constraint firstItem="QcY-hc-CST" firstAttribute="leading" secondItem="gvE-89-ecO" secondAttribute="leading" id="999-OT-2J8"/>
+                                    <constraint firstAttribute="trailing" secondItem="o6e-7c-6yp" secondAttribute="trailing" id="KYj-bu-O3J"/>
+                                    <constraint firstAttribute="trailing" secondItem="QcY-hc-CST" secondAttribute="trailing" id="O28-yl-9eq"/>
+                                    <constraint firstItem="o6e-7c-6yp" firstAttribute="leading" secondItem="gvE-89-ecO" secondAttribute="leading" id="YK7-Fb-WsL"/>
+                                    <constraint firstAttribute="width" secondItem="gvE-89-ecO" secondAttribute="height" multiplier="306:319" id="fvq-tw-sDG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Com-yx-xXD" secondAttribute="trailing" id="g2E-K8-hjV"/>
+                                </constraints>
+                                <variation key="heightClass=compact" spacing="20"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gQo-cr-JaF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" symbolic="YES" id="2gT-gY-dFi"/>
+                            <constraint firstItem="gvE-89-ecO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="3fC-Jg-G44"/>
                             <constraint firstAttribute="trailing" secondItem="gQo-cr-JaF" secondAttribute="trailing" constant="-47" id="4FH-ZS-C6u"/>
                             <constraint firstItem="gQo-cr-JaF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-66" id="Ef3-w7-PLv"/>
+                            <constraint firstItem="gvE-89-ecO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KcJ-Ix-N10"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvE-89-ecO" secondAttribute="trailing" id="wTa-XD-Gdo"/>
                         </constraints>
                     </view>
                 </viewController>
