@@ -8,7 +8,49 @@ import Foundation
 import UIKit
 import os.log
 
-class ReviewData {
+class ReviewData: NSObject, NSCoding {
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(id, forKey: PropertyKey.id)
+        coder.encode(title, forKey: PropertyKey.title)
+        coder.encode(author, forKey: PropertyKey.author)
+        coder.encode(review, forKey: PropertyKey.review)
+        coder.encode(photo, forKey: PropertyKey.photo)
+        coder.encode(attitude, forKey: PropertyKey.attitude)
+        coder.encode(userName, forKey: PropertyKey.userName)
+        coder.encode(link, forKey: PropertyKey.link)
+    }
+    
+    struct PropertyKey {
+        static let id = "id"
+        static let title = "title"
+        static let author = "author"
+        static let review = "review"
+        static let photo = "photo"
+        static let attitude = "attitude"
+        static let userName = "userName"
+        static let link = "link"
+    }
+    
+    required convenience init?(coder: NSCoder) {
+        let id = coder.decodeInteger(forKey: PropertyKey.id);
+        guard let title = coder.decodeObject(forKey: PropertyKey.title) as? String else {
+            os_log("Unable to decode the title", log: OSLog.default, type: .debug)
+            return nil
+        }
+        let author = coder.decodeObject(forKey: PropertyKey.author) as? String
+        let review = coder.decodeObject(forKey: PropertyKey.review) as? String
+        let photo = coder.decodeObject(forKey: PropertyKey.photo) as? UIImage
+        let attitude = coder.decodeObject(forKey: PropertyKey.attitude) as? String
+        guard let userName = coder.decodeObject(forKey: PropertyKey.userName) as? String else {
+            os_log("Unable to decode userName", log: OSLog.default, type: .debug)
+            return nil
+        }
+        let link = coder.decodeObject(forKey: PropertyKey.link) as? URL
+        
+        self.init(id: id, title: title, author: author, review: review, photo: photo, attitude: attitude, userName: userName, link: link)
+    }
+    
     var id: Int
     var title: String
     var author: String?
@@ -23,7 +65,9 @@ class ReviewData {
         guard !title.isEmpty  else {
             return nil
         }
-        
+        guard !userName.isEmpty  else {
+            return nil
+        }
         
         self.id = id;
         self.title = title;
@@ -36,27 +80,51 @@ class ReviewData {
     }
     
     static var defaultData: [ReviewData] = {
-        return loadDataFromPlistNamed("localdata");
+        if let savedData = loadMyDataFromArchive() {
+            return savedData
+        }
+        if let localData = loadDataFromPlistNamed("localdata") {
+            return localData
+        } else {
+            return ([])
+        }
     }()
-    /*
+    
     static func saveMyData(mydata: [ReviewData]) {
         do {
-           // let needsavedata = try NSKeyedArchiver.archivedData(withRootObject: mydata, requiringSecureCoding: false)
-            //try needsavedata.write(to: ArchiveURL)
+            let needsavedata = try NSKeyedArchiver.archivedData(withRootObject: mydata, requiringSecureCoding: false)
+            try needsavedata.write(to: ArchiveURL)
         } catch {
             //fatalError("Unable to save data")
             print(error)
             os_log("Failed to save data...", log: OSLog.default, type: .error)
         }
-    }*/
+    }
+    
+    static func loadMyDataFromArchive() -> [ReviewData]? {
+        do {
+            guard let codedData = try? Data(contentsOf: ReviewData.ArchiveURL) else {
+                return nil
+            }
+            let loadedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(codedData) as? [ReviewData]
+            return loadedData
+        } catch {
+            os_log("Failed to load data ....", log: OSLog.default, type: .error)
+        }
+        return nil
+    }
+    
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("MyModelData")
     
     
-    static func loadDataFromPlistNamed(_ plistName: String) -> [ReviewData] {
+    static func loadDataFromPlistNamed(_ plistName: String) -> [ReviewData]? {
         guard
             let path = Bundle.main.path(forResource: plistName, ofType: "plist"),
             let dictArray = NSArray(contentsOfFile: path) as? [[String: AnyObject]]
         else {
             fatalError("An error occured while reading \(plistName).plist")
+            return nil
         }
         
         var reviewDataReturn: [ReviewData] = [];
@@ -86,4 +154,5 @@ class ReviewData {
         }
         return reviewDataReturn
     }
+    
 }
